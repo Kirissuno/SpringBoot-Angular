@@ -1,0 +1,24 @@
+<div class="container bg-primary mt-3 justify-content-center">
+  <!-- Links -->
+  <div class="row text-center">
+    <div class="col-4">
+      <a routerLink="empleados" class="text-white" routerLinkActive="active">Lista de empleados</a>
+    </div>
+    <div class="col-4">
+        <a routerLink="alta" class="text-white" routerLinkActive="active">Nuevo empleado</a>
+      </div>
+    <div class="col-4">
+      <a routerLink="nominas" class="text-white" routerLinkActive="active">Listar nóminas</a>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <br>
+  <h2 style="text-align: center;">{{title}}</h2>
+  <hr>
+  <div class="card">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

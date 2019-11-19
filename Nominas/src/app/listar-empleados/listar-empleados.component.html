@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Lista de empleados</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped text-center">
+        <thead>
+          <tr>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Sexo</th>
+            <th>Categoría</th>
+            <th>Años trabajados</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empleado of empleados | async">
+            <td>{{empleado.dni}}</td>
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.sexo}}</td>
+            <td>{{empleado.categoria}}</td>
+            <td>{{empleado.anyos}}</td>
+            <td><button (click)="deleteEmpleado(empleado.dni)" class="btn btn-danger">Borrar</button>
+                <button (click)="detallesEmpleado(employee.dni)" class="btn btn-info" style="margin-left: 10px">Ver Detalles</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

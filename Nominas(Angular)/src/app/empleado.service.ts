@@ -21,4 +21,12 @@ export class EmpleadoService {
   crearEmpleado(empleado: Object): Observable<Object>{
     return this.http.post(`${this.baseUrl}`, empleado);
   }
+
+  getEmpleado(dni : String): Observable<any>{
+    return this.http.get(`${this.baseUrl}/${dni}`);
+  }
+
+  updateEmpleado(empleado:Object):Observable<Object>{
+    return this.http.patch(`${this.baseUrl}`, empleado);
+  }
 }

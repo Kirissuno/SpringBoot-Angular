@@ -1,0 +1,13 @@
+<h2>Detalles empleado</h2>
+
+<hr/>
+<div *ngIf="nomina">
+  <div>
+    <p>El empleado con dni <b>{{nomina.dni}}</b> tiene un sueldo de <b>{{nomina.sueldo}}</b></p>
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="lista()" class="btn btn-primary">Volver a la lista de empleados</button><br>
+

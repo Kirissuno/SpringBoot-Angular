@@ -1,0 +1,21 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Lista de nominas</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped text-center">
+        <thead>
+          <tr>
+            <th>DNI</th>
+            <th>Sueldo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let nomina of nominas | async">
+            <td>{{nomina.dni}}</td>
+            <td>{{nomina.sueldo}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

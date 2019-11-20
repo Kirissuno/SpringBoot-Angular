@@ -8,13 +8,19 @@ import { CrearEmpleadoComponent } from './crear-empleado/crear-empleado.componen
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { EmpleadoService } from './empleado.service';
+import { DetallesEmpleadoComponent } from './detalles-empleado/detalles-empleado.component';
+import { ListarNominasComponent } from './listar-nominas/listar-nominas.component';
+import { ActualizarEmpleadoComponent } from './actualizar-empleado/actualizar-empleado.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarEmpleadosComponent,
-    CrearEmpleadoComponent
+    CrearEmpleadoComponent,
+    DetallesEmpleadoComponent,
+    ListarNominasComponent,
+    ActualizarEmpleadoComponent
   ],
   imports: [
     BrowserModule,

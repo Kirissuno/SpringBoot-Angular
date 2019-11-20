@@ -32,7 +32,11 @@ export class ListarEmpleadosComponent implements OnInit {
   }
 
   detallesEmpleado(dni:String){
-    this.router.navigate(['detalles', dni]);
+    this.router.navigate(['nominas', dni]);
+  }
+
+  actualizarEmpleado(dni:String){
+    this.router.navigate(['empleados', dni]);
   }
 
 }

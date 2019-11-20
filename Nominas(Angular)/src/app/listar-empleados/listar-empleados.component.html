@@ -4,32 +4,28 @@
   </div>
   <div class="panel-body">
     <div class="row">
-      <table class="table col-12 table-striped text-center">
-        <thead>
-          <tr>
-            <th>DNI</th>
-            <th>Nombre</th>
-            <th>Sexo</th>
-            <th>Categoría</th>
-            <th>Años trabajados</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let empleado of empleados | async">
-            <td>{{empleado.dni}}</td>
-            <td>{{empleado.nombre}}</td>
-            <td>{{empleado.sexo}}</td>
-            <td>{{empleado.categoria}}</td>
-            <td>{{empleado.anyos}}</td>
-            <td><button (click)="deleteEmpleado(empleado.dni)" class="btn btn-danger">Borrar</button>
-              <button (click)="detallesEmpleado(empleado.dni)" class="btn btn-info" style="margin-left: 10px">Ver
-                Detalles</button>
-              <button (click)="actualizarEmpleado(empleado.dni)" class="btn btn-success"
-                style="margin-left: 10px">Actualizar</button>
-            </td>
-          </tr>
-        </tbody>
+      <table class="table col-12 table-striped text-center table-responsive-md">
+        <tr>
+          <th>DNI</th>
+          <th>Nombre</th>
+          <th>Sexo</th>
+          <th>Categoría</th>
+          <th>Años trabajados</th>
+          <th>Acciones</th>
+        </tr>
+        <tr *ngFor="let empleado of empleados | async">
+          <td>{{empleado.dni}}</td>
+          <td>{{empleado.nombre}}</td>
+          <td>{{empleado.sexo}}</td>
+          <td>{{empleado.categoria}}</td>
+          <td>{{empleado.anyos}}</td>
+          <td><button (click)="deleteEmpleado(empleado.dni)" class="btn btn-danger">Borrar</button>
+            <button (click)="detallesEmpleado(empleado.dni)" class="btn btn-info" style="margin-left: 10px">Ver
+              Detalles</button>
+            <button (click)="actualizarEmpleado(empleado.dni)" class="btn btn-success"
+              style="margin-left: 10px">Actualizar</button>
+          </td>
+        </tr>
       </table>
     </div>
   </div>
